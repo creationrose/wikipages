@@ -7,6 +7,10 @@ match('contacts/:id', {:via => :get, :to => 'contacts#show'})
 match('contacts/:id/edit', {:via => :get, :to => 'contacts#edit'})
 match('contacts/:id', {:via => [:patch, :put], :to => 'contacts#update'})
 match('contacts/:id', {:via => :delete, :to => 'contacts#destroy'})
+match('contacts/:contact_id/phones/new', {:via => :get, :to => 'phones#new'})
+match('contacts/:contact_id/phones', {:via => :post, :to => 'phones#create'})
+match('contacts/:contact_id/addresses/new', {:via => :get, :to => 'addresses#new'})
+match('contacts/:contact_id/addresses', {:via => :post, :to => 'addresses#create'})
 end
 
 

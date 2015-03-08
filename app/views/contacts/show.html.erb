@@ -4,7 +4,57 @@
 <p>Email: <%= @contact.email %></p>
 
 </br>
+</br>
+</br>
 
+<p>Other Phones:</p>
+
+<ul>
+  <% @contact.phones.each do |phone| %>
+    <li>
+      <%= phone.number %> |
+      <a href="/contacts/<%= @contact.id %>/phones/<%= phone.id %>/edit">Edit</a> |
+      <a href="/contacts/<%= @contact.id %>/phones/<%= phone.id %>"
+         data-confirm="You sure?"
+         data-method="delete"
+         rel="nofollow">Delete</a>
+    </li>
+  <% end %>
+</ul>
+
+</br>
+
+
+<p>Addresses:</p>
+
+<ul>
+  <% @contact.addresses.each do |new_address| %>
+    <li>
+      <%= new_address.address %> |
+      <a href="/contacts/<%= @contact.id %>/addresses/<%= new_address.id %>/edit">Edit</a> |
+      <a href="/contacts/<%= @contact.id %>/addresses/<%= new_address.id %>"
+         data-confirm="Are you sure?"
+         data-method="delete"
+         rel="nofollow">Delete</a>
+    </li>
+  <% end %>
+</ul>
+
+
+
+</br>
+</br>
+
+
+
+
+</br>
+<p><a href="/contacts/<%= @contact.id %>/phones/new">Add Another phone</a></p>
+</br>
+
+
+<p><a href="/contacts/<%= @contact.id %>/addresses/new">Add Another Address</a></p>
+</br>
 
 <p><a href="/contacts/<%= @contact.id %>/edit">Edit Contact </a></p>
 </br>
