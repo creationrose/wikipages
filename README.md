@@ -58,9 +58,9 @@ Contact.create(:name => "A cool name", :phone => "5551119999", :email =>"name@ma
 
 +++ If you are starting from scratch, we first run: ```rails new folder_name -d postgresql -T ``` 
 
--d tells it to us postgres for the database. You can easily replace that with ```-d mysql ```
+-d specifies postgres for the database. You can easily replace that with ```-d mysql ```
 
--T is to supposed to tell it not to use Rails default testing tools. You can leave it out. 
+-T is to supposed to tell it not to use Rails default testing tools. You can leave it out if you want. 
 
 
 +++ Fix up all files, database.yml, Rakefile,  Gemfile to whatever you want. Then run ```bundle update.```
