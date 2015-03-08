@@ -6,4 +6,8 @@ describe Contact do
     contact = Contact.new({:name => "Diana"})
     expect(contact.name).to eq ("Diana")
   end
+
+	it { should have_many :phones }
+
+	it { should have_many :addresses}
 end
