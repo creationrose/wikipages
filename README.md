@@ -1,7 +1,7 @@
-#Wikipages Personal Phone Book 
+#Wikipages Personal Phone Book
 
 
-This app is very useful for having a backup for your contacts. 
+This app is very useful for having a backup for your contacts.
 
 ##Author
 
@@ -10,7 +10,7 @@ Jessica Hori
 
 ##Install
 
-This app is used in connection with Rails and ActiveRecord. 
+This app is used in connection with Rails and ActiveRecord.
 
 Download or fork the repository and bundle in terminal in order to use the required gems and dependencies.
 
@@ -37,14 +37,14 @@ rake db:test:prepare
 ```
 
 Run Rspec and it should all pass. Then you are ready to run ```rails server```
-in the terminal.  Go to ```localhost:3000```  to use to program.
+ or ```rails s``` in the terminal.  Go to ```localhost:3000```  to use to program.
 
 
 To add contacts from terminal run  ```rails console```  or  ```rails c```  for short
 
 Then you would type ```Contact.create(:name => 'Chuck Norris')```
 
-or 
+or
 
 ```ruby
 
@@ -56,11 +56,11 @@ Contact.create(:name => "A cool name", :phone => "5551119999", :email =>"name@ma
 ---------------------------------------
 ---------------------------------------
 
-+++ If you are starting from scratch, we first run: ```rails new folder_name -d postgresql -T ``` 
++++ If you are starting from scratch, we first run: ```rails new folder_name -d postgresql -T ```
 
 -d specifies postgres for the database. You can easily replace that with ```-d mysql ```
 
--T is to supposed to tell it not to use Rails default testing tools. You can leave it out if you want. 
+-T is to supposed to tell it not to use Rails default testing tools. You can leave it out if you want.
 
 
 +++ Fix up all files, database.yml, Rakefile,  Gemfile to whatever you want. Then run ```bundle update.```
@@ -79,13 +79,13 @@ Contact.create(:name => "A cool name", :phone => "5551119999", :email =>"name@ma
 Most important folders in basic Rails app to add and edit:
 
 1. app > controllers   (application_controller.rb) (classname_controller.rb)
-2. models > (classname.rb)
-3. views > classnamedfolder > (index.html.erb, edit.html.erb, new.html.erb, show.html.erb, success.html.erb)
+2. models > (classname.rb)  *Add other class folders*
+3. views > classnamedfolder > (index.html.erb, edit.html.erb, new.html.erb, show.html.erb, success.html.erb)   *Each class has its own folder with those same routes. *
 4. config > (routes.rb)  //  To lesser degree: (application.rb, database.yml)
 5. db > migration files. Edit change.
-6. spec >  Add classname_spec.rb
+6. spec >  Add classname_spec.rb   *Other class specs*
 7. Gemfile
-8. Readme 
+8. Readme
 
 
 
@@ -96,5 +96,4 @@ GNU GPL v.2.0
 
 Report bugs via fork and pull requests.
 
-If you would like to improve and add more features and functionality feel free. 
-
+If you would like to improve and add more features and functionality feel free.
