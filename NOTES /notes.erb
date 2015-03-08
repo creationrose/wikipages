@@ -1,0 +1,16 @@
+<% if @contact.errors.any? %>
+<h3>Please fix these errors.</h3>
+
+<ul>
+   <% @contact.errors.full_messages.each do |message| %>
+   	<li><%= message %></li>
+   	<% end %>
+</ul>
+
+<% end %>
+
+
+##Prepopulate the form with previous input after error message.
+<input id="contact_email" name="email" type="text" value="<%= @contact.email %>">
+							                	   value="<%= @contact.name %>">
+												   value="<%= @contact.phone %>">

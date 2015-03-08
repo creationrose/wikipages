@@ -1,6 +1,7 @@
-<h1>New Contact</h1>
+<h1>Edit Contact</h1>
 
-<form action="/contacts" method="post">
+<form action="/contacts/<%= @contact.id %>" method="post">
+<input name="_method" type="hidden" value="patch">
 
 <label for="contact_name">Enter Name </label>
 <input id="contact_name" name="name" type="text" value="<%= @contact.name %>">
@@ -12,7 +13,7 @@
 <input id="contact_email" name="email" type="text" value="<%= @contact.email %>">
 
 
-<button type="submit">Create Contact</button>
+<button type="submit">Update Contact</button>
 
 
 </form>
@@ -28,4 +29,3 @@
 </ul>
 
 <% end %>
-
