@@ -56,20 +56,20 @@ Contact.create(:name => "A cool name", :phone => "5551119999", :email =>"name@ma
 ---------------------------------------
 ---------------------------------------
 
-1. If you are starting from scratch, we first run: ```rails new folder_name -d postgresql -T ``` 
++++ If you are starting from scratch, we first run: ```rails new folder_name -d postgresql -T ``` 
 
 -d tells it to us postgres for the database. You can easily replace that with ```-d mysql ```
 
 -T is to supposed to tell it not to use Rails default testing tools. You can leave it out. 
 
 
-2. Fix up all files, database.yml, Rakefile,  Gemfile to whatever you want. Then run ```bundle update.```
++++ Fix up all files, database.yml, Rakefile,  Gemfile to whatever you want. Then run ```bundle update.```
 
-3. ```rake db:create```
++++ ```rake db:create```
 
-4. ```rails generate migration create_classnames```   A in the database is created and the migration file is sent to *db folder*
++++ ```rails generate migration create_classnames```   A in the database is created and the migration file is sent to *db folder*
 
-5.```rails generate rspec:install```  (If you are including this testing in your gemfile)
++++ ```rails generate rspec:install```  (If you are including this testing in your gemfile)
 
 ---------------------------------------
 ---------------------------------------
