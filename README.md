@@ -67,7 +67,7 @@ Contact.create(:name => "A cool name", :phone => "5551119999", :email =>"name@ma
 
 +++ ```rake db:create```
 
-+++ ```rails generate migration create_classnames```   A in the database is created and the migration file is sent to *db folder*
++++ ```rails generate migration create_classnames```  A table in the database is created and the migration file is sent to  the *db folder*
 
 +++ ```rails generate rspec:install```  (If you are including this testing in your gemfile)
 
