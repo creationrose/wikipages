@@ -1,16 +1,39 @@
-<% if @contact.errors.any? %>
-<h3>Please fix these errors.</h3>
+Better Parameters
 
-<ul>
-   <% @contact.errors.full_messages.each do |message| %>
-   	<li><%= message %></li>
-   	<% end %>
-</ul>
+New Way
 
-<% end %>
+{:contact => {:name => 'Eleanor',
+              :phone => '1-800-WHITE-HOUSE',
+              :email => 'eleanor@rooselvelt.com'
+             }
+}
+
+@contact = Contact.new(params[:contact])
 
 
-##Prepopulate the form with previous input after error message.
-<input id="contact_email" name="email" type="text" value="<%= @contact.email %>">
-							                	   value="<%= @contact.name %>">
-												   value="<%= @contact.phone %>">
+Old Form:
+
+<form action="/contacts/<%= @contact.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <label for="contact_name">Name</label>
+  <input id="contact_name" name="name" type="text" value="<%= @contact.name %>">
+  <label for="contact_phone">Phone</label>
+  <input id="contact_phone" name="phone" type="text" value="<%= @contact.phone %>">
+  <label for="contact_email">Email</label>
+  <input id="contact_email" name="email" type="text" value="<%= @contact.email %>">
+  <button>Update contact</button>
+</form>
+
+
+New Form : 
+
+<form action="/contacts/<%= @contact.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <label for="contact_name">Name</label>
+  <input id="contact_name" name="contact[name]" type="text" value="<%= @contact.name %>">
+  <label for="contact_phone">Phone</label>
+  <input id="contact_phone" name="contact[phone]" type="text" value="<%= @contact.phone %>">
+  <label for="contact_email">Email</label>
+  <input id="contact_email" name="contact[email]" type="text" value="<%= @contact.email %>">
+  <button>Update contact</button>
+</form>
