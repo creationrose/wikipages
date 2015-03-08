@@ -37,7 +37,7 @@ rake db:test:prepare
 ```
 
 Run Rspec and it should all pass. Then you are ready to run ```rails server```
-in the terminal.  Go to ```localhost:3000/contacts```  to use to program.
+in the terminal.  Go to ```localhost:3000```  to use to program.
 
 
 To add contacts from terminal run  ```rails console```  or  ```rails c```  for short
