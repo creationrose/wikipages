@@ -11,6 +11,7 @@ match('contacts/:contact_id/phones/new', {:via => :get, :to => 'phones#new'})
 match('contacts/:contact_id/phones', {:via => :post, :to => 'phones#create'})
 match('contacts/:contact_id/addresses/new', {:via => :get, :to => 'addresses#new'})
 match('contacts/:contact_id/addresses', {:via => :post, :to => 'addresses#create'})
+resources :contacts, only: [:destroy]
 end
 
 

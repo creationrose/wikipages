@@ -1,4 +1,4 @@
-class ContactsController < ApplicationController
+	class ContactsController < ApplicationController
 	def index
 		@contacts = Contact.all
 		render('contacts/index.html.erb')
@@ -38,10 +38,11 @@ class ContactsController < ApplicationController
 		end
 	end
 	
-	def delete
+	def destroy
 		@contact = Contact.find(params[:id])
 		@contact.destroy
-		render('contacts/destroy.html.erb')
+		redirect_to contacts_path
+	    #render('contacts/destroy.html.erb')
 	end
 
 end
